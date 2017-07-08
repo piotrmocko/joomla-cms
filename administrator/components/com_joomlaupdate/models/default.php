@@ -1020,10 +1020,10 @@ ENDDATA;
 		foreach ($coreExtensions as $coreExtension)
 		{
 			$query->where(
-				'(' . $db->qn('type') . ' <> ' . $db->q($extension[0])
-				. ' OR ' . $db->qn('element') . ' <> ' . $db->q($extension[1])
-				. ' OR ' . $db->qn('folder') . ' <> ' . $db->q($extension[2])
-				. ' OR ' . $db->qn('client_id') . ' <> ' . $extension[3] . ')'
+				'(' . $db->qn('type') . ' <> ' . $db->q($coreExtension[0])
+				. ' OR ' . $db->qn('element') . ' <> ' . $db->q($coreExtension[1])
+				. ' OR ' . $db->qn('folder') . ' <> ' . $db->q($coreExtension[2])
+				. ' OR ' . $db->qn('client_id') . ' <> ' . $coreExtension[3] . ')'
 			);
 		}
 
